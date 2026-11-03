@@ -11,7 +11,7 @@ Every claim in the documents carries an evidence marker.
 | If you want to | Read |
 |---|---|
 | Check a claim | [`docs/findings.md`](docs/findings.md): F-001 to F-090, each with the experiment behind it. This is the heart of the research and everything else is derived from it. |
-| Write or fix a mapper 64 emulator | [`docs/emulator_guide.md`](docs/emulator_guide.md). Section 4A is for people who already have an MMC3. Fore hardware verified test ROM's see roms/README.md |
+| Write or fix a mapper 64 emulator | [`docs/emulator_guide.md`](docs/emulator_guide.md). Section 4A is for people who already have an MMC3. For hardware-verified test ROMs, see [`rom/README.md`](rom/README.md) |
 | Pins, timing figures and an HDL starting point | [`docs/fpga_notes.md`](docs/fpga_notes.md) |
 | Understand how it works | [`docs/functional_description.md`](docs/functional_description.md) |
 | Rebuild it in an FPGA or design a cartridge | [`docs/fpga_notes.md`](docs/fpga_notes.md), [`docs/timing_measurements.md`](docs/timing_measurements.md) |
@@ -65,7 +65,7 @@ Every claim in the documents carries an evidence marker.
 All commands run in a Docker container through `./drun.sh`.
 The first call builds the image: cc65 2.19, Python 3, sigrok-cli, SKiDL, CMake, the Pico SDK 2.3.1 and the Arm toolchain.
 
-`./drun.sh --device /dev/ttyACM0 ...` passes the RP2350 adapter's serial port through. 
+`./drun.sh --device /dev/ttyACM0 ...` passes the RP2350 adapter's serial port through.
 
 The image does not include KiCad or the Arduino IDE.
 Without Docker, install the same tools yourself (see the `Dockerfile`) and drop the `./drun.sh`.
@@ -85,9 +85,9 @@ The ready-made images are in `rom/build/` (the six `g*.nes` files).
   | `g6_raster.nes` | IRQ in real rendering, raster splits | `43c3a9863ed705edf7af60c8efafefa6` |
 
   Check with `./drun.sh "cd rom && md5sum build/g*.nes"`. A different cc65 version could change the bytes; the sums above were made with ca65 V2.18 - Ubuntu 2.19-1, which is what the image installs.
-- **Checks without hardware:** `./drun.sh rom/tools/run_checks.sh` 
+- **Checks without hardware:** `./drun.sh rom/tools/run_checks.sh`
 
-builds the ROMs and runs them on the software models of the chip (the hardware model and the reference model). 
+builds the ROMs and runs them on the software models of the chip (the hardware model and the reference model).
 - **Reference model:** `./drun.sh python3 -I reference/test_rambo1.py`.
 - **RP2350 firmware:** `./drun.sh "cmake -S firmware/rp2350_jig -B firmware/rp2350_jig/build -G Ninja && cmake --build firmware/rp2350_jig/build"` gives `firmware/rp2350_jig/build/rp2350_jig.uf2`. (The container uses Ubuntu's Arm toolchain, so the bytes differ from the author's build.)
 - **Netlist generator:** `./drun.sh "cd hardware/generators && python3 rambo1_cart.py"` (SKiDL warns about missing KiCad libraries).
