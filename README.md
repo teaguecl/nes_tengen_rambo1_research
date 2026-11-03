@@ -72,7 +72,7 @@ Without Docker, install the same tools yourself (see the `Dockerfile`) and drop 
 
 - **Test ROMs:** `./drun.sh "cd rom && make"`
 
-Ready-made `.nes` images are attached to the releases.
+The ready-made images are in `rom/build/` (the six `g*.nes` files).
   Expected MD5 of the six test ROMs (`rom/build/g*.nes`, 524,304 bytes each):
 
   | Image | Tests | MD5 |

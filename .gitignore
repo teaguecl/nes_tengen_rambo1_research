@@ -3,9 +3,11 @@ arduino-ide_*/
 arduino-ide_*.zip
 arduino-ide_*.AppImage
 minipro/
-# build output (release the test ROMs as GitHub Release assets)
-rom/build/
-build/
+# build output; the six test ROMs (rom/build/g?_*.nes) are published, everything else built is not
+/build/
+firmware/**/build/
+rom/build/*
+!rom/build/g?_*.nes
 __pycache__/
 *.pyc
 # personal photos and video until reviewed (move the ones you keep to docs/images/)
