@@ -1,0 +1,15 @@
+# Power-on CIRAM A10 behaviour: sweep PPU A10/A11 and record CIRAM_A10, before and after $A000 writes.
+ppu 0 0
+ppu 1 0
+ppu 0 1
+ppu 1 1
+w A000 00
+ppu 0 0
+ppu 1 0
+ppu 0 1
+ppu 1 1
+w A000 01
+ppu 0 0
+ppu 1 0
+ppu 0 1
+ppu 1 1

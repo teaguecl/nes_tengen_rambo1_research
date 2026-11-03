@@ -1,0 +1,358 @@
+# Cold-start latch test: first expiry after $C001 with NO $C000 ever written gives the power-on latch.
+# CPU mode: first expiry at 4*(L+1)+2 cycles after the $C001 write (F-018). Run straight after a cold start,
+# USB only, --no-trace. Coarse after cycle 40 (steps of 8); the latch persists, so refine warm afterwards.
+requires cold
+mark cold latch test
+r
+r
+w E000 00
+r
+w C001 01
+w E001 00
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+w E000 00
+r

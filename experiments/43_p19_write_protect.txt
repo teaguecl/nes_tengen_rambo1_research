@@ -1,0 +1,205 @@
+# Pin 19 high: are register writes accepted, and what does the mapping show with no writes?
+# Set 1 ends with ctrl E0 (1KB+inversion+PRG mode 1) and A000=01; set 2 ends with ctrl 20 and A000=00.
+mark A p19 low: load set1
+p19 z
+w 8000 20
+w 8001 10
+w 8000 21
+w 8001 30
+w 8000 22
+w 8001 50
+w 8000 23
+w 8001 70
+w 8000 24
+w 8001 90
+w 8000 25
+w 8001 B0
+w 8000 28
+w 8001 D0
+w 8000 29
+w 8001 F0
+w 8000 26
+w 8001 05
+w 8000 27
+w 8001 0A
+w 8000 2F
+w 8001 14
+w 8000 E0
+w A000 01
+a12 0
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 1
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 0
+ppu 0 0
+rd 8000
+rd A000
+rd C000
+rd E000
+mark B p19 high, no writes
+p19 1
+a12 0
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 1
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 0
+ppu 0 0
+rd 8000
+rd A000
+rd C000
+rd E000
+mark C p19 high: load set2
+p19 1
+w 8000 20
+w 8001 20
+w 8000 21
+w 8001 40
+w 8000 22
+w 8001 60
+w 8000 23
+w 8001 80
+w 8000 24
+w 8001 A0
+w 8000 25
+w 8001 C0
+w 8000 28
+w 8001 E0
+w 8000 29
+w 8001 E8
+w 8000 26
+w 8001 06
+w 8000 27
+w 8001 0B
+w 8000 2F
+w 8001 15
+w 8000 20
+w A000 00
+a12 0
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 1
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 0
+ppu 0 0
+rd 8000
+rd A000
+rd C000
+rd E000
+mark D p19 released, no writes
+p19 z
+a12 0
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 1
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 0
+ppu 0 0
+rd 8000
+rd A000
+rd C000
+rd E000
+mark E control: p19 low, load set2
+p19 z
+w 8000 20
+w 8001 20
+w 8000 21
+w 8001 40
+w 8000 22
+w 8001 60
+w 8000 23
+w 8001 80
+w 8000 24
+w 8001 A0
+w 8000 25
+w 8001 C0
+w 8000 28
+w 8001 E0
+w 8000 29
+w 8001 E8
+w 8000 26
+w 8001 06
+w 8000 27
+w 8001 0B
+w 8000 2F
+w 8001 15
+w 8000 20
+w A000 00
+a12 0
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 1
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 0
+ppu 0 0
+rd 8000
+rd A000
+rd C000
+rd E000
+p19 z

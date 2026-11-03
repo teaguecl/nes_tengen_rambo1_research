@@ -1,0 +1,231 @@
+# Cold-start counter test: is the power-on /IRQ low a running counter with an unset latch?
+# Run straight after a cold start (USB only, 15 s unpowered), --no-trace. No $C000/$C001 write at any point.
+requires cold
+mark cold counter test
+r
+r
+m 8
+r
+a12 1
+m 2
+a12 0
+m 20
+r
+a12 1
+m 2
+a12 0
+m 20
+r
+a12 1
+m 2
+a12 0
+m 20
+r
+w E000 00
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+w E001 00
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 64
+r
+a12 1
+m 2
+a12 0
+m 20
+r
+a12 1
+m 2
+a12 0
+m 20
+r
+a12 1
+m 2
+a12 0
+m 20
+r
+a12 1
+m 2
+a12 0
+m 20
+r
+a12 1
+m 2
+a12 0
+m 20
+r
+a12 1
+m 2
+a12 0
+m 20
+r
+a12 1
+m 2
+a12 0
+m 20
+r
+a12 1
+m 2
+a12 0
+m 20
+r
+a12 1
+m 2
+a12 0
+m 20
+r
+a12 1
+m 2
+a12 0
+m 20
+r
+a12 1
+m 2
+a12 0
+m 20
+r
+a12 1
+m 2
+a12 0
+m 20
+r
+w E000 00
+r

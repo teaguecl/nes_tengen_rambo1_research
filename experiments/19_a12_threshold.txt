@@ -1,0 +1,416 @@
+# A12 filter threshold: latch 1, A12 mode, A12 high for 2 M2 cycles, low for G M2 cycles, up to 8 pulses.
+# 'r' after every pulse; the pulse count at which IRQ_N first goes low is the result per G.
+mark G=8
+w E000 00
+w C000 01
+w C001 00
+w E001 00
+m 64
+a12 1
+m 2
+a12 0
+m 8
+r
+a12 1
+m 2
+a12 0
+m 8
+r
+a12 1
+m 2
+a12 0
+m 8
+r
+a12 1
+m 2
+a12 0
+m 8
+r
+a12 1
+m 2
+a12 0
+m 8
+r
+a12 1
+m 2
+a12 0
+m 8
+r
+a12 1
+m 2
+a12 0
+m 8
+r
+a12 1
+m 2
+a12 0
+m 8
+r
+mark G=9
+w E000 00
+w C000 01
+w C001 00
+w E001 00
+m 64
+a12 1
+m 2
+a12 0
+m 9
+r
+a12 1
+m 2
+a12 0
+m 9
+r
+a12 1
+m 2
+a12 0
+m 9
+r
+a12 1
+m 2
+a12 0
+m 9
+r
+a12 1
+m 2
+a12 0
+m 9
+r
+a12 1
+m 2
+a12 0
+m 9
+r
+a12 1
+m 2
+a12 0
+m 9
+r
+a12 1
+m 2
+a12 0
+m 9
+r
+mark G=10
+w E000 00
+w C000 01
+w C001 00
+w E001 00
+m 64
+a12 1
+m 2
+a12 0
+m 10
+r
+a12 1
+m 2
+a12 0
+m 10
+r
+a12 1
+m 2
+a12 0
+m 10
+r
+a12 1
+m 2
+a12 0
+m 10
+r
+a12 1
+m 2
+a12 0
+m 10
+r
+a12 1
+m 2
+a12 0
+m 10
+r
+a12 1
+m 2
+a12 0
+m 10
+r
+a12 1
+m 2
+a12 0
+m 10
+r
+mark G=11
+w E000 00
+w C000 01
+w C001 00
+w E001 00
+m 64
+a12 1
+m 2
+a12 0
+m 11
+r
+a12 1
+m 2
+a12 0
+m 11
+r
+a12 1
+m 2
+a12 0
+m 11
+r
+a12 1
+m 2
+a12 0
+m 11
+r
+a12 1
+m 2
+a12 0
+m 11
+r
+a12 1
+m 2
+a12 0
+m 11
+r
+a12 1
+m 2
+a12 0
+m 11
+r
+a12 1
+m 2
+a12 0
+m 11
+r
+mark G=12
+w E000 00
+w C000 01
+w C001 00
+w E001 00
+m 64
+a12 1
+m 2
+a12 0
+m 12
+r
+a12 1
+m 2
+a12 0
+m 12
+r
+a12 1
+m 2
+a12 0
+m 12
+r
+a12 1
+m 2
+a12 0
+m 12
+r
+a12 1
+m 2
+a12 0
+m 12
+r
+a12 1
+m 2
+a12 0
+m 12
+r
+a12 1
+m 2
+a12 0
+m 12
+r
+a12 1
+m 2
+a12 0
+m 12
+r
+mark G=13
+w E000 00
+w C000 01
+w C001 00
+w E001 00
+m 64
+a12 1
+m 2
+a12 0
+m 13
+r
+a12 1
+m 2
+a12 0
+m 13
+r
+a12 1
+m 2
+a12 0
+m 13
+r
+a12 1
+m 2
+a12 0
+m 13
+r
+a12 1
+m 2
+a12 0
+m 13
+r
+a12 1
+m 2
+a12 0
+m 13
+r
+a12 1
+m 2
+a12 0
+m 13
+r
+a12 1
+m 2
+a12 0
+m 13
+r
+mark G=14
+w E000 00
+w C000 01
+w C001 00
+w E001 00
+m 64
+a12 1
+m 2
+a12 0
+m 14
+r
+a12 1
+m 2
+a12 0
+m 14
+r
+a12 1
+m 2
+a12 0
+m 14
+r
+a12 1
+m 2
+a12 0
+m 14
+r
+a12 1
+m 2
+a12 0
+m 14
+r
+a12 1
+m 2
+a12 0
+m 14
+r
+a12 1
+m 2
+a12 0
+m 14
+r
+a12 1
+m 2
+a12 0
+m 14
+r
+mark G=15
+w E000 00
+w C000 01
+w C001 00
+w E001 00
+m 64
+a12 1
+m 2
+a12 0
+m 15
+r
+a12 1
+m 2
+a12 0
+m 15
+r
+a12 1
+m 2
+a12 0
+m 15
+r
+a12 1
+m 2
+a12 0
+m 15
+r
+a12 1
+m 2
+a12 0
+m 15
+r
+a12 1
+m 2
+a12 0
+m 15
+r
+a12 1
+m 2
+a12 0
+m 15
+r
+a12 1
+m 2
+a12 0
+m 15
+r
+mark G=16
+w E000 00
+w C000 01
+w C001 00
+w E001 00
+m 64
+a12 1
+m 2
+a12 0
+m 16
+r
+a12 1
+m 2
+a12 0
+m 16
+r
+a12 1
+m 2
+a12 0
+m 16
+r
+a12 1
+m 2
+a12 0
+m 16
+r
+a12 1
+m 2
+a12 0
+m 16
+r
+a12 1
+m 2
+a12 0
+m 16
+r
+a12 1
+m 2
+a12 0
+m 16
+r
+a12 1
+m 2
+a12 0
+m 16
+r

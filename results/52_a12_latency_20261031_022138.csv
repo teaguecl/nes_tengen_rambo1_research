@@ -1,0 +1,135 @@
+# script=experiments/52_a12_latency.txt
+# date=2026-10-31T02:21:41.572420
+# power=warm
+# note=NESdev verification (setups fill the A12 filter before C001)
+# firmware=''
+t_s,step,command,reply,result,PRG_A13,PRG_A14,PRG_A15,PRG_A16,PRG_A17,PRG_CE_N,CHR_A10,CHR_A11,CHR_A12,CHR_A13,CHR_A14,CHR_A15,CHR_A16,CHR_A17,CIRAM_A10,IRQ_N
+0.153,1,p19 0,"ok,p19,L,net=0",ok,,,,,,,,,,,,,,,,
+0.153,2,mark latency A: A12 rises while M2 low,latency A: A12 rises while M2 low,mark,,,,,,,,,,,,,,,,
+0.308,3,a12 0,"ok,a12",ok,,,,,,,,,,,,,,,,
+0.464,4,m 20,"ok,m,20",ok,,,,,,,,,,,,,,,,
+0.620,5,w E000 00,"ok,w,E000,00",ok,,,,,,,,,,,,,,,,
+0.775,6,w C000 00,"ok,w,C000,00",ok,,,,,,,,,,,,,,,,
+0.931,7,w C001 00,"ok,w,C001,00",ok,,,,,,,,,,,,,,,,
+1.087,8,w E001 00,"ok,w,E001,00",ok,,,,,,,,,,,,,,,,
+1.242,9,m 64,"ok,m,64",ok,,,,,,,,,,,,,,,,
+1.398,10,a12 1,"ok,a12",ok,,,,,,,,,,,,,,,,
+1.549,11,m 2,"ok,m,2",ok,,,,,,,,,,,,,,,,
+1.705,12,a12 0,"ok,a12",ok,,,,,,,,,,,,,,,,
+1.861,13,m 20,"ok,m,20",ok,,,,,,,,,,,,,,,,
+2.029,14,r,"out,8425,1000010000100101,PRG_A13=1,PRG_A14=0,PRG_A15=1,PRG_A16=0,PRG_A17=0,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1",ok,1,0,1,0,0,1,0,0,0,0,1,0,0,0,0,1
+2.184,15,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+2.340,16,wseq add RW=1 M2=0 ROMSEL=1 A12=0 T=1 S,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+2.496,17,wseq add A12=1 T=1 S,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+2.651,18,wseq add M2=1 T=1 S,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+2.807,19,wseq add M2=0 T=1 S,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+2.962,20,wseq add M2=1 T=1 S,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+3.118,21,wseq add M2=0 T=1 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+3.274,22,wseq add M2=1 T=1 S,"ok,wseq,add,7",ok,,,,,,,,,,,,,,,,
+3.429,23,wseq add M2=0 T=1 S,"ok,wseq,add,8",ok,,,,,,,,,,,,,,,,
+3.585,24,wseq add A12=0 T=1 S,"ok,wseq,add,9",ok,,,,,,,,,,,,,,,,
+3.888,25,wseq run,"ok,wseq,steps=9,samples=9,cycles=810 | s,0 | out,843F,1000010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,1 | out,943F,1001010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=1,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,2 | out,943F,1001010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=1,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,3 | out,943F,1001010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=1,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,4 | out,943F,1001010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=1,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,5 | out,143F,0001010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=1,CHR_A17=0,CIRAM_A10=0,IRQ_N=0 | s,6 | out,143F,0001010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=1,CHR_A17=0,CIRAM_A10=0,IRQ_N=0 | s,7 | out,143F,0001010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=1,CHR_A17=0,CIRAM_A10=0,IRQ_N=0 | s,8 | out,043F,0000010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=0",ok,1,1,1,1,1,1,0,0,0,0,1,0,0,0,0,1
+3.888,25,wseq run [sample 2],,sample,1,1,1,1,1,1,0,0,0,0,1,0,1,0,0,1
+3.888,25,wseq run [sample 3],,sample,1,1,1,1,1,1,0,0,0,0,1,0,1,0,0,1
+3.888,25,wseq run [sample 4],,sample,1,1,1,1,1,1,0,0,0,0,1,0,1,0,0,1
+3.888,25,wseq run [sample 5],,sample,1,1,1,1,1,1,0,0,0,0,1,0,1,0,0,1
+3.888,25,wseq run [sample 6],,sample,1,1,1,1,1,1,0,0,0,0,1,0,1,0,0,0
+3.888,25,wseq run [sample 7],,sample,1,1,1,1,1,1,0,0,0,0,1,0,1,0,0,0
+3.888,25,wseq run [sample 8],,sample,1,1,1,1,1,1,0,0,0,0,1,0,1,0,0,0
+3.888,25,wseq run [sample 9],,sample,1,1,1,1,1,1,0,0,0,0,1,0,0,0,0,0
+3.889,26,mark latency B: A12 rises while M2 high,latency B: A12 rises while M2 high,mark,,,,,,,,,,,,,,,,
+4.044,27,a12 0,"ok,a12",ok,,,,,,,,,,,,,,,,
+4.199,28,m 20,"ok,m,20",ok,,,,,,,,,,,,,,,,
+4.355,29,w E000 00,"ok,w,E000,00",ok,,,,,,,,,,,,,,,,
+4.511,30,w C000 00,"ok,w,C000,00",ok,,,,,,,,,,,,,,,,
+4.666,31,w C001 00,"ok,w,C001,00",ok,,,,,,,,,,,,,,,,
+4.822,32,w E001 00,"ok,w,E001,00",ok,,,,,,,,,,,,,,,,
+4.977,33,m 64,"ok,m,64",ok,,,,,,,,,,,,,,,,
+5.133,34,a12 1,"ok,a12",ok,,,,,,,,,,,,,,,,
+5.285,35,m 2,"ok,m,2",ok,,,,,,,,,,,,,,,,
+5.440,36,a12 0,"ok,a12",ok,,,,,,,,,,,,,,,,
+5.596,37,m 20,"ok,m,20",ok,,,,,,,,,,,,,,,,
+5.764,38,r,"out,8425,1000010000100101,PRG_A13=1,PRG_A14=0,PRG_A15=1,PRG_A16=0,PRG_A17=0,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1",ok,1,0,1,0,0,1,0,0,0,0,1,0,0,0,0,1
+5.920,39,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+6.075,40,wseq add RW=1 M2=0 ROMSEL=1 A12=0 T=1 S,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+6.231,41,wseq add M2=1 T=1 S,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+6.387,42,wseq add A12=1 T=1 S,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+6.542,43,wseq add M2=0 T=1 S,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+6.698,44,wseq add M2=1 T=1 S,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+6.853,45,wseq add M2=0 T=1 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+7.009,46,wseq add M2=1 T=1 S,"ok,wseq,add,7",ok,,,,,,,,,,,,,,,,
+7.165,47,wseq add M2=0 T=1 S,"ok,wseq,add,8",ok,,,,,,,,,,,,,,,,
+7.320,48,wseq add A12=0 T=1 S,"ok,wseq,add,9",ok,,,,,,,,,,,,,,,,
+7.624,49,wseq run,"ok,wseq,steps=9,samples=9,cycles=810 | s,0 | out,843F,1000010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,1 | out,843F,1000010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,2 | out,943F,1001010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=1,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,3 | out,943F,1001010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=1,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,4 | out,943F,1001010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=1,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,5 | out,143F,0001010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=1,CHR_A17=0,CIRAM_A10=0,IRQ_N=0 | s,6 | out,143F,0001010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=1,CHR_A17=0,CIRAM_A10=0,IRQ_N=0 | s,7 | out,143F,0001010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=1,CHR_A17=0,CIRAM_A10=0,IRQ_N=0 | s,8 | out,043F,0000010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=0",ok,1,1,1,1,1,1,0,0,0,0,1,0,0,0,0,1
+7.624,49,wseq run [sample 2],,sample,1,1,1,1,1,1,0,0,0,0,1,0,0,0,0,1
+7.624,49,wseq run [sample 3],,sample,1,1,1,1,1,1,0,0,0,0,1,0,1,0,0,1
+7.624,49,wseq run [sample 4],,sample,1,1,1,1,1,1,0,0,0,0,1,0,1,0,0,1
+7.624,49,wseq run [sample 5],,sample,1,1,1,1,1,1,0,0,0,0,1,0,1,0,0,1
+7.624,49,wseq run [sample 6],,sample,1,1,1,1,1,1,0,0,0,0,1,0,1,0,0,0
+7.624,49,wseq run [sample 7],,sample,1,1,1,1,1,1,0,0,0,0,1,0,1,0,0,0
+7.624,49,wseq run [sample 8],,sample,1,1,1,1,1,1,0,0,0,0,1,0,1,0,0,0
+7.624,49,wseq run [sample 9],,sample,1,1,1,1,1,1,0,0,0,0,1,0,0,0,0,0
+7.624,50,mark latency C: A12 drops again after fall,latency C: A12 drops again after fall,mark,,,,,,,,,,,,,,,,
+7.779,51,a12 0,"ok,a12",ok,,,,,,,,,,,,,,,,
+7.935,52,m 20,"ok,m,20",ok,,,,,,,,,,,,,,,,
+8.090,53,w E000 00,"ok,w,E000,00",ok,,,,,,,,,,,,,,,,
+8.246,54,w C000 00,"ok,w,C000,00",ok,,,,,,,,,,,,,,,,
+8.402,55,w C001 00,"ok,w,C001,00",ok,,,,,,,,,,,,,,,,
+8.557,56,w E001 00,"ok,w,E001,00",ok,,,,,,,,,,,,,,,,
+8.713,57,m 64,"ok,m,64",ok,,,,,,,,,,,,,,,,
+8.868,58,a12 1,"ok,a12",ok,,,,,,,,,,,,,,,,
+9.020,59,m 2,"ok,m,2",ok,,,,,,,,,,,,,,,,
+9.176,60,a12 0,"ok,a12",ok,,,,,,,,,,,,,,,,
+9.331,61,m 20,"ok,m,20",ok,,,,,,,,,,,,,,,,
+9.499,62,r,"out,8425,1000010000100101,PRG_A13=1,PRG_A14=0,PRG_A15=1,PRG_A16=0,PRG_A17=0,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1",ok,1,0,1,0,0,1,0,0,0,0,1,0,0,0,0,1
+9.655,63,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+9.811,64,wseq add RW=1 M2=0 ROMSEL=1 A12=0 T=1 S,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+9.966,65,wseq add A12=1 T=1 S,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+10.122,66,wseq add M2=1 T=1 S,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+10.277,67,wseq add M2=0 T=1 S,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+10.433,68,wseq add A12=0 T=1 S,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+10.589,69,wseq add M2=1 T=1 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+10.744,70,wseq add M2=0 T=1 S,"ok,wseq,add,7",ok,,,,,,,,,,,,,,,,
+10.900,71,wseq add M2=1 T=1 S,"ok,wseq,add,8",ok,,,,,,,,,,,,,,,,
+11.056,72,wseq add M2=0 T=1 S,"ok,wseq,add,9",ok,,,,,,,,,,,,,,,,
+11.359,73,wseq run,"ok,wseq,steps=9,samples=9,cycles=810 | s,0 | out,843F,1000010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,1 | out,943F,1001010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=1,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,2 | out,943F,1001010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=1,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,3 | out,943F,1001010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=1,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,4 | out,843F,1000010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,5 | out,843F,1000010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,6 | out,043F,0000010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=0 | s,7 | out,043F,0000010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=0 | s,8 | out,043F,0000010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=0",ok,1,1,1,1,1,1,0,0,0,0,1,0,0,0,0,1
+11.359,73,wseq run [sample 2],,sample,1,1,1,1,1,1,0,0,0,0,1,0,1,0,0,1
+11.359,73,wseq run [sample 3],,sample,1,1,1,1,1,1,0,0,0,0,1,0,1,0,0,1
+11.359,73,wseq run [sample 4],,sample,1,1,1,1,1,1,0,0,0,0,1,0,1,0,0,1
+11.359,73,wseq run [sample 5],,sample,1,1,1,1,1,1,0,0,0,0,1,0,0,0,0,1
+11.359,73,wseq run [sample 6],,sample,1,1,1,1,1,1,0,0,0,0,1,0,0,0,0,1
+11.359,73,wseq run [sample 7],,sample,1,1,1,1,1,1,0,0,0,0,1,0,0,0,0,0
+11.359,73,wseq run [sample 8],,sample,1,1,1,1,1,1,0,0,0,0,1,0,0,0,0,0
+11.359,73,wseq run [sample 9],,sample,1,1,1,1,1,1,0,0,0,0,1,0,0,0,0,0
+11.359,74,mark latency D: A12 drops during M2 high after fall,latency D: A12 drops during M2 high after fall,mark,,,,,,,,,,,,,,,,
+11.514,75,a12 0,"ok,a12",ok,,,,,,,,,,,,,,,,
+11.670,76,m 20,"ok,m,20",ok,,,,,,,,,,,,,,,,
+11.826,77,w E000 00,"ok,w,E000,00",ok,,,,,,,,,,,,,,,,
+11.981,78,w C000 00,"ok,w,C000,00",ok,,,,,,,,,,,,,,,,
+12.137,79,w C001 00,"ok,w,C001,00",ok,,,,,,,,,,,,,,,,
+12.293,80,w E001 00,"ok,w,E001,00",ok,,,,,,,,,,,,,,,,
+12.448,81,m 64,"ok,m,64",ok,,,,,,,,,,,,,,,,
+12.604,82,a12 1,"ok,a12",ok,,,,,,,,,,,,,,,,
+12.755,83,m 2,"ok,m,2",ok,,,,,,,,,,,,,,,,
+12.911,84,a12 0,"ok,a12",ok,,,,,,,,,,,,,,,,
+13.067,85,m 20,"ok,m,20",ok,,,,,,,,,,,,,,,,
+13.235,86,r,"out,8425,1000010000100101,PRG_A13=1,PRG_A14=0,PRG_A15=1,PRG_A16=0,PRG_A17=0,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1",ok,1,0,1,0,0,1,0,0,0,0,1,0,0,0,0,1
+13.390,87,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+13.546,88,wseq add RW=1 M2=0 ROMSEL=1 A12=0 T=1 S,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+13.702,89,wseq add A12=1 T=1 S,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+13.857,90,wseq add M2=1 T=1 S,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+14.013,91,wseq add M2=0 T=1 S,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+14.168,92,wseq add M2=1 T=1 S,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+14.324,93,wseq add A12=0 T=1 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+14.480,94,wseq add M2=0 T=1 S,"ok,wseq,add,7",ok,,,,,,,,,,,,,,,,
+14.636,95,wseq add M2=1 T=1 S,"ok,wseq,add,8",ok,,,,,,,,,,,,,,,,
+14.791,96,wseq add M2=0 T=1 S,"ok,wseq,add,9",ok,,,,,,,,,,,,,,,,
+15.094,97,wseq run,"ok,wseq,steps=9,samples=9,cycles=810 | s,0 | out,843F,1000010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,1 | out,943F,1001010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=1,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,2 | out,943F,1001010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=1,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,3 | out,943F,1001010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=1,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,4 | out,943F,1001010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=1,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,5 | out,843F,1000010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,6 | out,043F,0000010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=0 | s,7 | out,043F,0000010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=0 | s,8 | out,043F,0000010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=0",ok,1,1,1,1,1,1,0,0,0,0,1,0,0,0,0,1
+15.095,97,wseq run [sample 2],,sample,1,1,1,1,1,1,0,0,0,0,1,0,1,0,0,1
+15.095,97,wseq run [sample 3],,sample,1,1,1,1,1,1,0,0,0,0,1,0,1,0,0,1
+15.095,97,wseq run [sample 4],,sample,1,1,1,1,1,1,0,0,0,0,1,0,1,0,0,1
+15.095,97,wseq run [sample 5],,sample,1,1,1,1,1,1,0,0,0,0,1,0,1,0,0,1
+15.095,97,wseq run [sample 6],,sample,1,1,1,1,1,1,0,0,0,0,1,0,0,0,0,1
+15.095,97,wseq run [sample 7],,sample,1,1,1,1,1,1,0,0,0,0,1,0,0,0,0,0
+15.095,97,wseq run [sample 8],,sample,1,1,1,1,1,1,0,0,0,0,1,0,0,0,0,0
+15.095,97,wseq run [sample 9],,sample,1,1,1,1,1,1,0,0,0,0,1,0,0,0,0,0

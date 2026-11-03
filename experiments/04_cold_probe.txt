@@ -1,0 +1,26 @@
+# Cold-start probe: everything in 01_cold_idle plus the power-on CHR/CIRAM response to PPU A10-A12,
+# recorded BEFORE any register write. Run immediately after a cold start (barrel first, then USB).
+# Note: raising PPU A12 once is a rising edge on the scanline counter; it is done last, after the
+# A12=0 sweep, so the first four sweep rows are not affected by it.
+requires cold
+r
+expect PRG_A13=1 PRG_A14=1 PRG_A15=1 PRG_A16=1 PRG_A17=1 PRG_CE_N=1
+expect CHR_A10=0 CHR_A11=0 CHR_A12=0 CHR_A13=0 CHR_A14=0 CHR_A15=0 CHR_A16=0 CHR_A17=0
+expect IRQ_N=0
+# sweep with A12=0
+a12 0
+ppu 0 0
+ppu 1 0
+ppu 0 1
+ppu 1 1
+# sweep with A12=1
+a12 1
+ppu 0 0
+ppu 1 0
+ppu 0 1
+ppu 1 1
+a12 0
+ppu 0 0
+expect IRQ_N=0     # did the A12 edge or the sweep change /IRQ?
+w E000 00
+expect IRQ_N=1

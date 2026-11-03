@@ -1,0 +1,31 @@
+# script=experiments/06_cold_1kb_mode.txt
+# date=2026-10-30T22:23:11.961479
+# power=cold
+# note=cold start, USB only, 15 s unpowered
+# firmware="RAMBO-1 jig ready. '?' for help."
+t_s,step,command,reply,result,PRG_A13,PRG_A14,PRG_A15,PRG_A16,PRG_A17,PRG_CE_N,CHR_A10,CHR_A11,CHR_A12,CHR_A13,CHR_A14,CHR_A15,CHR_A16,CHR_A17,CIRAM_A10,IRQ_N
+0.000,1,requires cold,,ok,,,,,,,,,,,,,,,,
+0.322,2,a12 0,"ok,a12",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0
+0.645,3,ppu 0 0,"ok,ppu",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0
+0.813,4,r,"out,003F,0000000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=0",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0
+0.813,5,expect CHR_A10=0 CHR_A11=0 CHR_A12=0 IRQ_N=0,,PASS,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0
+0.813,6,"mark power-on, before any write: PPU A10 sweep","power-on, before any write: PPU A10 sweep",mark,,,,,,,,,,,,,,,,
+1.137,7,ppu 1 0,"ok,ppu",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,0
+1.460,8,ppu 0 0,"ok,ppu",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0
+1.460,9,"mark after w 8000 00 (select R0, 2 KB mode, no inversion); bank data untouched","after w 8000 00 (select R0, 2 KB mode, no inversion); bank data untouched",mark,,,,,,,,,,,,,,,,
+1.784,10,w 8000 00,"ok,w,8000,00",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0
+2.107,11,ppu 0 0,"ok,ppu",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0
+2.431,12,ppu 1 0,"ok,ppu",ok,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,0
+2.754,13,ppu 0 1,"ok,ppu",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0
+3.078,14,ppu 1 1,"ok,ppu",ok,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,0
+3.078,15,"mark after w 8000 20 (select R0, 1 KB mode)","after w 8000 20 (select R0, 1 KB mode)",mark,,,,,,,,,,,,,,,,
+3.402,16,w 8000 20,"ok,w,8000,20",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,0
+3.725,17,ppu 0 0,"ok,ppu",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0
+4.049,18,ppu 1 0,"ok,ppu",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,0
+4.372,19,ppu 0 1,"ok,ppu",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0
+4.696,20,ppu 1 1,"ok,ppu",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,0
+4.696,21,mark back to 2 KB mode,back to 2 KB mode,mark,,,,,,,,,,,,,,,,
+5.019,22,w 8000 00,"ok,w,8000,00",ok,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,0
+5.343,23,ppu 1 0,"ok,ppu",ok,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,0
+5.667,24,w E000 00,"ok,w,E000,00",ok,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,1
+5.667,25,expect IRQ_N=1,,PASS,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,1

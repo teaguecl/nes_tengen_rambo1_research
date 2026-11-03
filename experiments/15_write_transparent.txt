@@ -1,0 +1,17 @@
+# Is the register transparent while the write window is open (M2=1, /ROMSEL=0, R/W=0)?
+# Data changes 10 -> 20 -> 30 inside the window, then the window closes and data changes to 50.
+# CHR byte (PPU A10-A12 = 0) is sampled after every step.
+ppu 0 0
+w 8000 00
+w 8001 00
+wseq clear
+wseq add RW=0 M2=0 ROMSEL=1 A=8001 D=10 T=4 S
+wseq add M2=1 T=4 S
+wseq add ROMSEL=0 D=10 T=4 S
+wseq add D=20 T=4 S
+wseq add D=30 T=4 S
+wseq add ROMSEL=1 T=4 S
+wseq add D=50 T=4 S
+wseq add M2=0 T=4 S
+wseq add RW=1 T=4 S
+wseq run force

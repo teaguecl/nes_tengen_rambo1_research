@@ -1,0 +1,13 @@
+; RAMBO-1 jig PIO engine (docs/rp2350_adapter_plan.md section 6). Two state machines of one PIO block, started in the same cycle:
+;   stim_raw : one 17-bit word (GPIO26..42) onto the stimulus pins per PIO cycle, fed by DMA (autopull threshold 17: one 32-bit word per cycle)
+;   cap_raw  : the pad levels of GPIO16..47, one 32-bit word per PIO cycle, autopush, drained by DMA. Bit k = GPIO 16 + k.
+
+.program stim_raw
+.wrap_target
+    out pins, 17
+.wrap
+
+.program cap_raw
+.wrap_target
+    in pins, 32
+.wrap

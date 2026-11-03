@@ -1,0 +1,6 @@
+.git
+arduino-ide_*
+minipro
+PXL_*
+**/build
+**/__pycache__

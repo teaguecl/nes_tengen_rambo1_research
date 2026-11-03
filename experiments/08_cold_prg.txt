@@ -1,0 +1,12 @@
+# Cold-start PRG state: read all four 8 KB windows before ANY register write.
+# Run straight after a cold start (USB-only, 15 s unpowered), before any other script.
+requires cold
+mark power-on PRG banks
+rd 8000
+rd A000
+rd C000
+rd E000
+rd 6000
+mark idle read for comparison
+r
+w E000 00

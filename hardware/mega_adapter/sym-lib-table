@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "mega_adapter")(type "KiCad")(uri "${KIPRJMOD}/mega_adapter.kicad_sym")(options "")(descr ""))
+)

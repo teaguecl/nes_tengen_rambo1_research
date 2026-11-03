@@ -1,0 +1,10 @@
+# R0 (2 KB CHR bank at $0000): bank value bit n drives CHR A(10+n). Verifies NESdev mapper 64.
+ppu 0 0
+a12 0
+w 8000 00        # select R0, default CHR mode
+w 8001 04
+expect CHR_A12=1 CHR_A13=0 CHR_A11=0
+w 8001 08
+expect CHR_A12=0 CHR_A13=1
+w 8001 00
+expect CHR_A12=0 CHR_A13=0 CHR_A14=0 CHR_A15=0 CHR_A16=0 CHR_A17=0

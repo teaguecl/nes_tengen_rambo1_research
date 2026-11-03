@@ -1,0 +1,327 @@
+# script=experiments/11_write_a0_phase.txt
+# date=2026-10-30T22:42:52.570803
+# power=warm
+# note=write-order, USB-only
+# firmware=''
+t_s,step,command,reply,result,PRG_A13,PRG_A14,PRG_A15,PRG_A16,PRG_A17,PRG_CE_N,CHR_A10,CHR_A11,CHR_A12,CHR_A13,CHR_A14,CHR_A15,CHR_A16,CHR_A17,CIRAM_A10,IRQ_N
+0.154,1,ppu 0 1,"ok,ppu",ok,,,,,,,,,,,,,,,,
+0.154,2,mark pat=00000,pat=00000,mark,,,,,,,,,,,,,,,,
+0.309,3,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+0.465,4,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+0.625,5,wseq add RW=0 M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+0.780,6,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+0.936,7,wseq add M2=1 ROMSEL=0 A=A000 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+1.092,8,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+1.247,9,wseq add M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+1.403,10,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+1.575,11,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,C03F,1100000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=1,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1
+1.575,12,mark pat=10000,pat=10000,mark,,,,,,,,,,,,,,,,
+1.731,13,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+1.886,14,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+2.046,15,wseq add RW=0 M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+2.202,16,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+2.357,17,wseq add M2=1 ROMSEL=0 A=A000 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+2.513,18,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+2.669,19,wseq add M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+2.824,20,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+2.996,21,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,C03F,1100000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=1,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1
+2.996,22,mark pat=01000,pat=01000,mark,,,,,,,,,,,,,,,,
+3.152,23,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+3.307,24,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+3.467,25,wseq add RW=0 M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+3.623,26,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+3.779,27,wseq add M2=1 ROMSEL=0 A=A000 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+3.934,28,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+4.090,29,wseq add M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+4.245,30,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+4.418,31,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,C03F,1100000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=1,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1
+4.418,32,mark pat=11000,pat=11000,mark,,,,,,,,,,,,,,,,
+4.573,33,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+4.729,34,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+4.888,35,wseq add RW=0 M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+5.044,36,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+5.200,37,wseq add M2=1 ROMSEL=0 A=A000 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+5.355,38,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+5.511,39,wseq add M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+5.667,40,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+5.839,41,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,C03F,1100000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=1,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1
+5.839,42,mark pat=00100,pat=00100,mark,,,,,,,,,,,,,,,,
+5.994,43,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+6.150,44,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+6.310,45,wseq add RW=0 M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+6.465,46,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+6.621,47,wseq add M2=1 ROMSEL=0 A=A001 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+6.777,48,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+6.932,49,wseq add M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+7.088,50,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+7.260,51,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,803F,1000000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1
+7.260,52,mark pat=10100,pat=10100,mark,,,,,,,,,,,,,,,,
+7.416,53,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+7.571,54,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+7.731,55,wseq add RW=0 M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+7.887,56,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+8.042,57,wseq add M2=1 ROMSEL=0 A=A001 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+8.198,58,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+8.353,59,wseq add M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+8.509,60,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+8.681,61,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,803F,1000000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1
+8.681,62,mark pat=01100,pat=01100,mark,,,,,,,,,,,,,,,,
+8.837,63,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+8.992,64,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+9.152,65,wseq add RW=0 M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+9.308,66,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+9.463,67,wseq add M2=1 ROMSEL=0 A=A001 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+9.619,68,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+9.775,69,wseq add M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+9.930,70,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+10.103,71,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,803F,1000000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1
+10.103,72,mark pat=11100,pat=11100,mark,,,,,,,,,,,,,,,,
+10.258,73,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+10.414,74,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+10.573,75,wseq add RW=0 M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+10.729,76,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+10.885,77,wseq add M2=1 ROMSEL=0 A=A001 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+11.040,78,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+11.196,79,wseq add M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+11.352,80,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+11.524,81,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,803F,1000000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1
+11.524,82,mark pat=00010,pat=00010,mark,,,,,,,,,,,,,,,,
+11.679,83,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+11.835,84,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+11.995,85,wseq add RW=0 M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+12.150,86,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+12.306,87,wseq add M2=1 ROMSEL=0 A=A000 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+12.462,88,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+12.617,89,wseq add M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+12.773,90,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+12.945,91,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,C03F,1100000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=1,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1
+12.945,92,mark pat=10010,pat=10010,mark,,,,,,,,,,,,,,,,
+13.101,93,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+13.256,94,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+13.416,95,wseq add RW=0 M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+13.572,96,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+13.727,97,wseq add M2=1 ROMSEL=0 A=A000 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+13.883,98,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+14.038,99,wseq add M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+14.194,100,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+14.366,101,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,C03F,1100000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=1,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1
+14.366,102,mark pat=01010,pat=01010,mark,,,,,,,,,,,,,,,,
+14.522,103,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+14.677,104,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+14.837,105,wseq add RW=0 M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+14.993,106,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+15.148,107,wseq add M2=1 ROMSEL=0 A=A000 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+15.304,108,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+15.460,109,wseq add M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+15.615,110,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+15.788,111,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,C03F,1100000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=1,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1
+15.788,112,mark pat=11010,pat=11010,mark,,,,,,,,,,,,,,,,
+15.943,113,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+16.099,114,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+16.258,115,wseq add RW=0 M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+16.414,116,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+16.570,117,wseq add M2=1 ROMSEL=0 A=A000 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+16.725,118,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+16.881,119,wseq add M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+17.037,120,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+17.209,121,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,C03F,1100000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=1,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1
+17.209,122,mark pat=00110,pat=00110,mark,,,,,,,,,,,,,,,,
+17.364,123,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+17.520,124,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+17.680,125,wseq add RW=0 M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+17.835,126,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+17.991,127,wseq add M2=1 ROMSEL=0 A=A001 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+18.147,128,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+18.302,129,wseq add M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+18.458,130,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+18.630,131,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,803F,1000000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1
+18.630,132,mark pat=10110,pat=10110,mark,,,,,,,,,,,,,,,,
+18.785,133,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+18.941,134,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+19.101,135,wseq add RW=0 M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+19.257,136,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+19.412,137,wseq add M2=1 ROMSEL=0 A=A001 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+19.568,138,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+19.723,139,wseq add M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+19.879,140,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+20.051,141,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,803F,1000000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1
+20.051,142,mark pat=01110,pat=01110,mark,,,,,,,,,,,,,,,,
+20.207,143,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+20.362,144,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+20.522,145,wseq add RW=0 M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+20.678,146,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+20.833,147,wseq add M2=1 ROMSEL=0 A=A001 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+20.989,148,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+21.145,149,wseq add M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+21.300,150,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+21.473,151,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,803F,1000000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1
+21.473,152,mark pat=11110,pat=11110,mark,,,,,,,,,,,,,,,,
+21.628,153,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+21.784,154,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+21.943,155,wseq add RW=0 M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+22.099,156,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+22.255,157,wseq add M2=1 ROMSEL=0 A=A001 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+22.410,158,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+22.566,159,wseq add M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+22.722,160,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+22.894,161,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,803F,1000000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1
+22.894,162,mark pat=00001,pat=00001,mark,,,,,,,,,,,,,,,,
+23.049,163,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+23.205,164,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+23.365,165,wseq add RW=0 M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+23.520,166,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+23.676,167,wseq add M2=1 ROMSEL=0 A=A000 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+23.832,168,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+23.987,169,wseq add M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+24.143,170,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+24.315,171,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,C03F,1100000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=1,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1
+24.315,172,mark pat=10001,pat=10001,mark,,,,,,,,,,,,,,,,
+24.470,173,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+24.626,174,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+24.786,175,wseq add RW=0 M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+24.942,176,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+25.097,177,wseq add M2=1 ROMSEL=0 A=A000 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+25.253,178,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+25.408,179,wseq add M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+25.564,180,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+25.736,181,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,C03F,1100000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=1,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1
+25.736,182,mark pat=01001,pat=01001,mark,,,,,,,,,,,,,,,,
+25.892,183,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+26.047,184,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+26.207,185,wseq add RW=0 M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+26.363,186,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+26.518,187,wseq add M2=1 ROMSEL=0 A=A000 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+26.674,188,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+26.830,189,wseq add M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+26.985,190,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+27.157,191,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,C03F,1100000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=1,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1
+27.158,192,mark pat=11001,pat=11001,mark,,,,,,,,,,,,,,,,
+27.313,193,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+27.469,194,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+27.628,195,wseq add RW=0 M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+27.784,196,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+27.940,197,wseq add M2=1 ROMSEL=0 A=A000 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+28.095,198,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+28.251,199,wseq add M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+28.406,200,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+28.579,201,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,C03F,1100000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=1,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1
+28.579,202,mark pat=00101,pat=00101,mark,,,,,,,,,,,,,,,,
+28.734,203,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+28.890,204,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+29.050,205,wseq add RW=0 M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+29.205,206,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+29.361,207,wseq add M2=1 ROMSEL=0 A=A001 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+29.516,208,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+29.672,209,wseq add M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+29.828,210,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+30.000,211,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,803F,1000000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1
+30.000,212,mark pat=10101,pat=10101,mark,,,,,,,,,,,,,,,,
+30.155,213,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+30.311,214,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+30.471,215,wseq add RW=0 M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+30.626,216,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+30.782,217,wseq add M2=1 ROMSEL=0 A=A001 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+30.938,218,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+31.093,219,wseq add M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+31.249,220,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+31.421,221,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,803F,1000000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1
+31.421,222,mark pat=01101,pat=01101,mark,,,,,,,,,,,,,,,,
+31.577,223,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+31.732,224,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+31.892,225,wseq add RW=0 M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+32.048,226,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+32.203,227,wseq add M2=1 ROMSEL=0 A=A001 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+32.359,228,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+32.515,229,wseq add M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+32.670,230,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+32.842,231,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,803F,1000000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1
+32.842,232,mark pat=11101,pat=11101,mark,,,,,,,,,,,,,,,,
+32.998,233,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+33.153,234,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+33.313,235,wseq add RW=0 M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+33.469,236,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+33.625,237,wseq add M2=1 ROMSEL=0 A=A001 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+33.780,238,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+33.936,239,wseq add M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+34.092,240,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+34.264,241,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,803F,1000000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1
+34.264,242,mark pat=00011,pat=00011,mark,,,,,,,,,,,,,,,,
+34.419,243,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+34.575,244,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+34.734,245,wseq add RW=0 M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+34.890,246,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+35.046,247,wseq add M2=1 ROMSEL=0 A=A000 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+35.201,248,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+35.357,249,wseq add M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+35.513,250,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+35.685,251,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,C03F,1100000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=1,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1
+35.685,252,mark pat=10011,pat=10011,mark,,,,,,,,,,,,,,,,
+35.840,253,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+35.996,254,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+36.156,255,wseq add RW=0 M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+36.311,256,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+36.467,257,wseq add M2=1 ROMSEL=0 A=A000 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+36.623,258,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+36.778,259,wseq add M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+36.934,260,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+37.106,261,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,C03F,1100000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=1,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1
+37.106,262,mark pat=01011,pat=01011,mark,,,,,,,,,,,,,,,,
+37.262,263,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+37.417,264,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+37.577,265,wseq add RW=0 M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+37.733,266,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+37.888,267,wseq add M2=1 ROMSEL=0 A=A000 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+38.044,268,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+38.200,269,wseq add M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+38.355,270,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+38.527,271,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,C03F,1100000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=1,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1
+38.527,272,mark pat=11011,pat=11011,mark,,,,,,,,,,,,,,,,
+38.683,273,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+38.838,274,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+38.998,275,wseq add RW=0 M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+39.154,276,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+39.310,277,wseq add M2=1 ROMSEL=0 A=A000 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+39.465,278,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+39.621,279,wseq add M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+39.776,280,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+39.949,281,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,C03F,1100000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=1,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1
+39.949,282,mark pat=00111,pat=00111,mark,,,,,,,,,,,,,,,,
+40.104,283,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+40.260,284,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+40.419,285,wseq add RW=0 M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+40.575,286,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+40.731,287,wseq add M2=1 ROMSEL=0 A=A001 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+40.886,288,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+41.042,289,wseq add M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+41.198,290,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+41.370,291,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,803F,1000000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1
+41.370,292,mark pat=10111,pat=10111,mark,,,,,,,,,,,,,,,,
+41.525,293,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+41.681,294,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+41.841,295,wseq add RW=0 M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+41.996,296,wseq add M2=1 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+42.152,297,wseq add M2=1 ROMSEL=0 A=A001 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+42.308,298,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+42.463,299,wseq add M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+42.619,300,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+42.791,301,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,803F,1000000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1
+42.791,302,mark pat=01111,pat=01111,mark,,,,,,,,,,,,,,,,
+42.947,303,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+43.102,304,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+43.262,305,wseq add RW=0 M2=0 ROMSEL=1 A=A000 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+43.418,306,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+43.573,307,wseq add M2=1 ROMSEL=0 A=A001 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+43.729,308,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+43.885,309,wseq add M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+44.040,310,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+44.212,311,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,803F,1000000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1
+44.212,312,mark pat=11111,pat=11111,mark,,,,,,,,,,,,,,,,
+44.368,313,w A000 00,"ok,w,A000,00",ok,,,,,,,,,,,,,,,,
+44.523,314,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+44.683,315,wseq add RW=0 M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+44.839,316,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+44.994,317,wseq add M2=1 ROMSEL=0 A=A001 D=01 T=4,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+45.150,318,wseq add M2=1 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+45.306,319,wseq add M2=0 ROMSEL=1 A=A001 D=01 T=4,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+45.461,320,wseq add RW=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+45.634,321,wseq run force,"ok,wseq,steps=6,samples=1,cycles=330 | s,5 | out,803F,1000000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1

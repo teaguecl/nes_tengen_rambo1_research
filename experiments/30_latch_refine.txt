@@ -1,0 +1,53 @@
+# Refine the power-on latch: same as 29 but fine steps around the expected expiry (1026 for L=255).
+# No $C000 has been written since the cold start in run 29. Warm run; latch unchanged.
+mark latch refine
+r
+w E000 00
+r
+w C001 01
+w E001 00
+r
+m 1018
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+w E000 00
+r

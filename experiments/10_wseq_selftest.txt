@@ -1,0 +1,105 @@
+# wseq self-test and timing calibration (warm).
+# 1. A wseq reproducing "w 8001 04" must give the same CHR result as the plain write command.
+w 8000 00
+w 8001 00
+expect CHR_A12=0
+wseq clear
+wseq add RW=0 M2=0 ROMSEL=1 A=8001 D=04 T=4
+wseq add M2=1 T=2
+wseq add ROMSEL=0 T=2
+wseq add ROMSEL=1 T=2
+wseq add M2=0 T=2
+wseq add RW=1 T=2 S
+wseq run force      # a real register write at $8001, so the guard needs 'force'
+expect CHR_A12=1
+# 2. The guard must refuse a register write outside $E000 (expect an 'err' reply, bank unchanged).
+wseq clear
+wseq add RW=0 M2=1 ROMSEL=0 A=8001 D=00 T=2
+wseq run
+r
+expect CHR_A12=1
+# 3. Calibration: 40 steps, T=0 vs T=10. cycles(T=10) - cycles(T=0) = 400 ticks.
+wseq clear
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq add D=00 T=0
+wseq run
+wseq clear
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq add D=00 T=10
+wseq run

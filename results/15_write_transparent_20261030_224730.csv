@@ -1,0 +1,28 @@
+# script=experiments/15_write_transparent.txt
+# date=2026-10-30T22:47:33.706583
+# power=warm
+# note=transparency check
+# firmware=''
+t_s,step,command,reply,result,PRG_A13,PRG_A14,PRG_A15,PRG_A16,PRG_A17,PRG_CE_N,CHR_A10,CHR_A11,CHR_A12,CHR_A13,CHR_A14,CHR_A15,CHR_A16,CHR_A17,CIRAM_A10,IRQ_N
+0.153,1,ppu 0 0,"ok,ppu",ok,,,,,,,,,,,,,,,,
+0.309,2,w 8000 00,"ok,w,8000,00",ok,,,,,,,,,,,,,,,,
+0.464,3,w 8001 00,"ok,w,8001,00",ok,,,,,,,,,,,,,,,,
+0.620,4,wseq clear,"ok,wseq,clear",ok,,,,,,,,,,,,,,,,
+0.779,5,wseq add RW=0 M2=0 ROMSEL=1 A=8001 D=10 T=4 S,"ok,wseq,add,1",ok,,,,,,,,,,,,,,,,
+0.935,6,wseq add M2=1 T=4 S,"ok,wseq,add,2",ok,,,,,,,,,,,,,,,,
+1.091,7,wseq add ROMSEL=0 D=10 T=4 S,"ok,wseq,add,3",ok,,,,,,,,,,,,,,,,
+1.246,8,wseq add D=20 T=4 S,"ok,wseq,add,4",ok,,,,,,,,,,,,,,,,
+1.402,9,wseq add D=30 T=4 S,"ok,wseq,add,5",ok,,,,,,,,,,,,,,,,
+1.558,10,wseq add ROMSEL=1 T=4 S,"ok,wseq,add,6",ok,,,,,,,,,,,,,,,,
+1.713,11,wseq add D=50 T=4 S,"ok,wseq,add,7",ok,,,,,,,,,,,,,,,,
+1.869,12,wseq add M2=0 T=4 S,"ok,wseq,add,8",ok,,,,,,,,,,,,,,,,
+2.025,13,wseq add RW=1 T=4 S,"ok,wseq,add,9",ok,,,,,,,,,,,,,,,,
+2.328,14,wseq run force,"ok,wseq,steps=9,samples=9,cycles=918 | s,0 | out,803F,1000000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,1 | out,803F,1000000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,2 | out,843F,1000010000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,3 | out,883F,1000100000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=1,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,4 | out,8C3F,1000110000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=1,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,5 | out,8C3F,1000110000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=1,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,6 | out,8C3F,1000110000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=1,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,7 | out,8C3F,1000110000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=1,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1 | s,8 | out,8C3F,1000110000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=1,CHR_A15=1,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=1",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1
+2.328,14,wseq run force [sample 2],,sample,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1
+2.328,14,wseq run force [sample 3],,sample,1,1,1,1,1,1,0,0,0,0,1,0,0,0,0,1
+2.328,14,wseq run force [sample 4],,sample,1,1,1,1,1,1,0,0,0,0,0,1,0,0,0,1
+2.328,14,wseq run force [sample 5],,sample,1,1,1,1,1,1,0,0,0,0,1,1,0,0,0,1
+2.328,14,wseq run force [sample 6],,sample,1,1,1,1,1,1,0,0,0,0,1,1,0,0,0,1
+2.328,14,wseq run force [sample 7],,sample,1,1,1,1,1,1,0,0,0,0,1,1,0,0,0,1
+2.328,14,wseq run force [sample 8],,sample,1,1,1,1,1,1,0,0,0,0,1,1,0,0,0,1
+2.328,14,wseq run force [sample 9],,sample,1,1,1,1,1,1,0,0,0,0,1,1,0,0,0,1

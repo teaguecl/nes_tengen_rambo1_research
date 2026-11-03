@@ -1,0 +1,738 @@
+# CPU-cycle mode, latch 2: k extra idle M2 cycles inserted between $C001 and $E001 (prescaler phase / counting while disabled).
+# 'm 1' then 'r' per event; result = events after $E001 until IRQ_N first goes low (and IRQ_N right after $E001).
+mark k=0
+w E000 00
+w C000 02
+w C001 01
+w E001 00
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+mark k=1
+w E000 00
+w C000 02
+w C001 01
+m 1
+w E001 00
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+mark k=2
+w E000 00
+w C000 02
+w C001 01
+m 2
+w E001 00
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+mark k=3
+w E000 00
+w C000 02
+w C001 01
+m 3
+w E001 00
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+mark k=4
+w E000 00
+w C000 02
+w C001 01
+m 4
+w E001 00
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+mark k=5
+w E000 00
+w C000 02
+w C001 01
+m 5
+w E001 00
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+mark k=6
+w E000 00
+w C000 02
+w C001 01
+m 6
+w E001 00
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+mark k=7
+w E000 00
+w C000 02
+w C001 01
+m 7
+w E001 00
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+mark k=8
+w E000 00
+w C000 02
+w C001 01
+m 8
+w E001 00
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+mark k=12
+w E000 00
+w C000 02
+w C001 01
+m 12
+w E001 00
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+mark k=16
+w E000 00
+w C000 02
+w C001 01
+m 16
+w E001 00
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r

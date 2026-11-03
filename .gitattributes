@@ -1,0 +1,4 @@
+# sigrok logic-analyser captures are binary (zip archives): never diff or merge them
+*.sr binary
+*.uf2 binary
+*.nes binary

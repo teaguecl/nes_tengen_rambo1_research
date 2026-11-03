@@ -1,0 +1,4 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "rambo") (type "KiCad") (uri "${KIPRJMOD}/rambo.kicad_sym") (options "") (descr ""))
+)

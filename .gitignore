@@ -1,0 +1,27 @@
+# third-party tools and downloads (link to them instead)
+arduino-ide_*/
+arduino-ide_*.zip
+arduino-ide_*.AppImage
+minipro/
+# build output (release the test ROMs as GitHub Release assets)
+rom/build/
+build/
+__pycache__/
+*.pyc
+# personal photos and video until reviewed (move the ones you keep to docs/images/)
+/PXL_*
+# misc
+*.zip
+!hardware/**/jlpcb/*.zip
+*~
+.DS_Store
+
+# KiCad local history and backups
+.history/
+*.bak
+*-backups/
+_autosave-*
+*.lck
+fp-info-cache
+
+logic_analyzer_guide.md

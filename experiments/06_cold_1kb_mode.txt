@@ -1,0 +1,28 @@
+# Cold-start test of the hypothesis that power-on state = 1 KB CHR mode ($8000 bit 5 set).
+# Evidence so far: at power-on CHR_A10 did NOT follow PPU A10, but with 2 KB mode selected it does.
+# Run straight after a cold start, before any other script. No bank data ($8001) is written.
+requires cold
+a12 0
+ppu 0 0
+r
+expect CHR_A10=0 CHR_A11=0 CHR_A12=0 IRQ_N=0
+mark power-on, before any write: PPU A10 sweep
+ppu 1 0
+ppu 0 0
+mark after w 8000 00 (select R0, 2 KB mode, no inversion); bank data untouched
+w 8000 00
+ppu 0 0
+ppu 1 0
+ppu 0 1
+ppu 1 1
+mark after w 8000 20 (select R0, 1 KB mode)
+w 8000 20
+ppu 0 0
+ppu 1 0
+ppu 0 1
+ppu 1 1
+mark back to 2 KB mode
+w 8000 00
+ppu 1 0
+w E000 00
+expect IRQ_N=1

@@ -1,0 +1,360 @@
+# Regression (38) with RAMBO pin 19 driven via Mega D2 + 1k: mode 0. SW1C OFF.
+p19 0
+mark prelude
+w 8000 20
+w 8001 10
+w 8000 21
+w 8001 30
+w 8000 22
+w 8001 50
+w 8000 23
+w 8001 70
+w 8000 24
+w 8001 90
+w 8000 25
+w 8001 B0
+w 8000 28
+w 8001 D0
+w 8000 29
+w 8001 F0
+w 8000 26
+w 8001 05
+w 8000 27
+w 8001 0A
+w 8000 2F
+w 8001 14
+w 8000 20
+w A000 00
+w E000 00
+r
+mark mapping ctrl=00
+w 8000 00
+a12 0
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 1
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 0
+ppu 0 0
+rd 8000
+rd A000
+rd C000
+rd E000
+mark mapping ctrl=20
+w 8000 20
+a12 0
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 1
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 0
+ppu 0 0
+rd 8000
+rd A000
+rd C000
+rd E000
+mark mapping ctrl=40
+w 8000 40
+a12 0
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 1
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 0
+ppu 0 0
+rd 8000
+rd A000
+rd C000
+rd E000
+mark mapping ctrl=80
+w 8000 80
+a12 0
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 1
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 0
+ppu 0 0
+rd 8000
+rd A000
+rd C000
+rd E000
+mark mapping ctrl=A0
+w 8000 A0
+a12 0
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 1
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 0
+ppu 0 0
+rd 8000
+rd A000
+rd C000
+rd E000
+mark mapping ctrl=E0
+w 8000 E0
+a12 0
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 1
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 0
+ppu 0 0
+rd 8000
+rd A000
+rd C000
+rd E000
+mark cpu irq L=1
+w E000 00
+w C000 01
+w C001 01
+w E001 00
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+mark cpu irq L=4
+w E000 00
+w C000 04
+w C001 01
+w E001 00
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+mark a12 L=1 G=16
+w E000 00
+w C000 01
+w C001 00
+w E001 00
+r
+m 64
+a12 1
+m 2
+a12 0
+m 16
+r
+a12 1
+m 2
+a12 0
+m 16
+r
+a12 1
+m 2
+a12 0
+m 16
+r
+a12 1
+m 2
+a12 0
+m 16
+r
+a12 1
+m 2
+a12 0
+m 16
+r
+a12 1
+m 2
+a12 0
+m 16
+r
+mark a12 L=1 G=15
+w E000 00
+w C000 01
+w C001 00
+w E001 00
+r
+m 64
+a12 1
+m 2
+a12 0
+m 15
+r
+a12 1
+m 2
+a12 0
+m 15
+r
+a12 1
+m 2
+a12 0
+m 15
+r
+a12 1
+m 2
+a12 0
+m 15
+r
+a12 1
+m 2
+a12 0
+m 15
+r
+a12 1
+m 2
+a12 0
+m 15
+r
+mark ce truth table
+bus 0 0 0
+bus 0 0 1
+bus 0 1 0
+bus 0 1 1
+bus 1 0 0
+bus 1 0 1
+bus 1 1 0
+bus 1 1 1
+bus 0 1 1
+w E000 00
+r
+p19 z

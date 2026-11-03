@@ -1,0 +1,652 @@
+# Pin 19 high: (1) C000 latch value written high; (2) does the stored constant depend on PPU A10-A12?
+p19 0
+mark C000 control (no high write): expiry 22
+p19 0
+w E000 00
+w C000 04
+p19 0
+w C001 01
+w E001 00
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+mark C000 := 01 written high
+p19 0
+w E000 00
+w C000 04
+p19 1
+w C000 01
+p19 0
+w C001 01
+w E001 00
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+mark C000 := FF written high
+p19 0
+w E000 00
+w C000 04
+p19 1
+w C000 FF
+p19 0
+w C001 01
+w E001 00
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+mark C000 := 04 written high
+p19 0
+w E000 00
+w C000 04
+p19 1
+w C000 04
+p19 0
+w C001 01
+w E001 00
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+mark R2 write with ppu a12=0 a11=0 a10=0
+p19 0
+a12 0
+ppu 0 0
+w 8000 02
+w 8001 00
+a12 0
+ppu 0 0
+p19 1
+w 8001 66
+a12 0
+ppu 0 0
+p19 0
+a12 1
+ppu 0 0
+r
+a12 0
+mark R2 write with ppu a12=0 a11=0 a10=1
+p19 0
+a12 0
+ppu 0 0
+w 8000 02
+w 8001 00
+a12 0
+ppu 1 0
+p19 1
+w 8001 66
+a12 0
+ppu 0 0
+p19 0
+a12 1
+ppu 0 0
+r
+a12 0
+mark R2 write with ppu a12=0 a11=1 a10=0
+p19 0
+a12 0
+ppu 0 0
+w 8000 02
+w 8001 00
+a12 0
+ppu 0 1
+p19 1
+w 8001 66
+a12 0
+ppu 0 0
+p19 0
+a12 1
+ppu 0 0
+r
+a12 0
+mark R2 write with ppu a12=0 a11=1 a10=1
+p19 0
+a12 0
+ppu 0 0
+w 8000 02
+w 8001 00
+a12 0
+ppu 1 1
+p19 1
+w 8001 66
+a12 0
+ppu 0 0
+p19 0
+a12 1
+ppu 0 0
+r
+a12 0
+mark R2 write with ppu a12=1 a11=0 a10=0
+p19 0
+a12 0
+ppu 0 0
+w 8000 02
+w 8001 00
+a12 1
+ppu 0 0
+p19 1
+w 8001 66
+a12 0
+ppu 0 0
+p19 0
+a12 1
+ppu 0 0
+r
+a12 0
+mark R2 write with ppu a12=1 a11=0 a10=1
+p19 0
+a12 0
+ppu 0 0
+w 8000 02
+w 8001 00
+a12 1
+ppu 1 0
+p19 1
+w 8001 66
+a12 0
+ppu 0 0
+p19 0
+a12 1
+ppu 0 0
+r
+a12 0
+mark R2 write with ppu a12=1 a11=1 a10=0
+p19 0
+a12 0
+ppu 0 0
+w 8000 02
+w 8001 00
+a12 1
+ppu 0 1
+p19 1
+w 8001 66
+a12 0
+ppu 0 0
+p19 0
+a12 1
+ppu 0 0
+r
+a12 0
+mark R2 write with ppu a12=1 a11=1 a10=1
+p19 0
+a12 0
+ppu 0 0
+w 8000 02
+w 8001 00
+a12 1
+ppu 1 1
+p19 1
+w 8001 66
+a12 0
+ppu 0 0
+p19 0
+a12 1
+ppu 0 0
+r
+a12 0

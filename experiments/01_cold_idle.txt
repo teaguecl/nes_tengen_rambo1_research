@@ -1,0 +1,9 @@
+# Cold power-up state. Unplug the Mega ~10 s, replug, run this first, before any other script.
+# Records the output pattern before any register write (open question 5).
+requires cold
+r
+expect PRG_A13=1 PRG_A14=1 PRG_A15=1 PRG_A16=1 PRG_A17=1 PRG_CE_N=1
+expect CHR_A10=0 CHR_A11=0 CHR_A12=0 CHR_A13=0 CHR_A14=0 CHR_A15=0 CHR_A16=0 CHR_A17=0
+expect IRQ_N=0   # observed 2026-10-30: /IRQ held low from power-up (meter: 0.023 V on pin 30)
+w E000 00        # IRQ acknowledge / disable
+expect IRQ_N=1

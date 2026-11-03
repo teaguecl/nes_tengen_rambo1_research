@@ -1,0 +1,385 @@
+# Cold power-on read with SW1C OFF (pin 19 floating). Same reads as runs 04, 08 and 29, taken in that order,
+# first command after power-up is a plain r. Run straight after a cold start, USB only, --no-trace.
+requires cold
+mark cold SW1C off
+r
+r
+a12 0
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 1
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 0
+ppu 0 0
+rd 8000
+rd A000
+rd C000
+rd E000
+rd 6000
+r
+m 8
+r
+w E000 00
+r
+w C001 01
+w E001 00
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 1
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+m 8
+r
+w E000 00
+r

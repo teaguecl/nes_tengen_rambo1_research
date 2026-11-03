@@ -1,0 +1,365 @@
+# Pin 19 HIGH: single writes, fingerprint after each. Start state: set 2 loaded with pin 19 driven low.
+p19 0
+w 8000 20
+w 8001 20
+w 8000 21
+w 8001 40
+w 8000 22
+w 8001 60
+w 8000 23
+w 8001 80
+w 8000 24
+w 8001 A0
+w 8000 25
+w 8001 C0
+w 8000 28
+w 8001 E0
+w 8000 29
+w 8001 E8
+w 8000 26
+w 8001 06
+w 8000 27
+w 8001 0B
+w 8000 2F
+w 8001 15
+w 8000 20
+w A000 00
+mark base (p19 low, set2)
+a12 0
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 1
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 0
+ppu 0 0
+rd 8000
+rd A000
+rd C000
+rd E000
+p19 1
+mark p19 high, no write
+a12 0
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 1
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 0
+ppu 0 0
+rd 8000
+rd A000
+rd C000
+rd E000
+mark p19 high: w 8000 00 (2KB, no inv, PRG0)
+w 8000 00
+a12 0
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 1
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 0
+ppu 0 0
+rd 8000
+rd A000
+rd C000
+rd E000
+mark p19 high: w 8001 66 (R0 := 66)
+w 8001 66
+a12 0
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 1
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 0
+ppu 0 0
+rd 8000
+rd A000
+rd C000
+rd E000
+mark p19 high: w 8000 01, w 8001 66 (R1 := 66)
+w 8000 01
+w 8001 66
+a12 0
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 1
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 0
+ppu 0 0
+rd 8000
+rd A000
+rd C000
+rd E000
+mark p19 high: w 8000 06, w 8001 07 (R6 := 07)
+w 8000 06
+w 8001 07
+a12 0
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 1
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 0
+ppu 0 0
+rd 8000
+rd A000
+rd C000
+rd E000
+mark p19 high: w 8000 80 (inversion)
+w 8000 80
+a12 0
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 1
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 0
+ppu 0 0
+rd 8000
+rd A000
+rd C000
+rd E000
+mark p19 high: w 8000 40 (PRG mode 1)
+w 8000 40
+a12 0
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 1
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 0
+ppu 0 0
+rd 8000
+rd A000
+rd C000
+rd E000
+mark p19 high: w 8000 20 (1KB mode)
+w 8000 20
+a12 0
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 1
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 0
+ppu 0 0
+rd 8000
+rd A000
+rd C000
+rd E000
+mark p19 high: w 8000 E0 (all three)
+w 8000 E0
+a12 0
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 1
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 0
+ppu 0 0
+rd 8000
+rd A000
+rd C000
+rd E000
+mark p19 high: w A000 01 (horizontal)
+w A000 01
+a12 0
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 1
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 0
+ppu 0 0
+rd 8000
+rd A000
+rd C000
+rd E000
+mark p19 high: w A000 00 (vertical)
+w A000 00
+a12 0
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 1
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 0
+ppu 0 0
+rd 8000
+rd A000
+rd C000
+rd E000
+p19 0
+mark p19 back low, no write
+a12 0
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 1
+ppu 0 0
+r
+ppu 1 0
+r
+ppu 0 1
+r
+ppu 1 1
+r
+a12 0
+ppu 0 0
+rd 8000
+rd A000
+rd C000
+rd E000

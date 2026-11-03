@@ -1,0 +1,13 @@
+# script=experiments/01_cold_idle.txt
+# date=2026-10-30T22:10:11.825554
+# power=cold
+# note=unplugged USB+barrel 15s, barrel first then USB
+# firmware="RAMBO-1 jig ready. '?' for help."
+t_s,step,command,reply,result,PRG_A13,PRG_A14,PRG_A15,PRG_A16,PRG_A17,PRG_CE_N,CHR_A10,CHR_A11,CHR_A12,CHR_A13,CHR_A14,CHR_A15,CHR_A16,CHR_A17,CIRAM_A10,IRQ_N
+0.000,1,requires cold,,ok,,,,,,,,,,,,,,,,
+0.170,2,r,"out,003F,0000000000111111,PRG_A13=1,PRG_A14=1,PRG_A15=1,PRG_A16=1,PRG_A17=1,PRG_CE_N=1,CHR_A10=0,CHR_A11=0,CHR_A12=0,CHR_A13=0,CHR_A14=0,CHR_A15=0,CHR_A16=0,CHR_A17=0,CIRAM_A10=0,IRQ_N=0",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0
+0.170,3,expect PRG_A13=1 PRG_A14=1 PRG_A15=1 PRG_A16=1 PRG_A17=1 PRG_CE_N=1,,PASS,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0
+0.170,4,expect CHR_A10=0 CHR_A11=0 CHR_A12=0 CHR_A13=0 CHR_A14=0 CHR_A15=0 CHR_A16=0 CHR_A17=0,,PASS,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0
+0.170,5,expect IRQ_N=0,,PASS,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0
+0.493,6,w E000 00,"ok,w,E000,00",ok,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1
+0.493,7,expect IRQ_N=1,,PASS,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1
